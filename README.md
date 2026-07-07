@@ -1,49 +1,75 @@
-# Claude Workspace Standard
+# Claude Workspace Standard — an agent-operations skill suite
 
-An enterprise-style operating standard for running a **multi-project personal
-workspace with an AI agent** (Claude Code), distilled from running a real
-job-search operation this way — 7 sub-projects, 3 repos, ~150 tests, a daily
-automation cycle, and dozens of agent sessions that all pick up cold and hand
-off clean.
+An operating standard for running a **multi-project personal workspace with
+an AI agent** (Claude Code), plus the playbook skills distilled from its
+first production use: a fully agent-operated job search — 7 sub-projects,
+4 repos, ~150 tests, a scheduled daily pipeline, and dozens of agent
+sessions that all pick up cold and hand off clean.
 
-The whole standard fits in one file: **[`SKILL.md`](SKILL.md)**.
-
-## The problem it solves
+## The problem
 
 Agent conversations are disposable; your work isn't. Without a standard,
-every new chat re-derives context, drive-by edits pile up, decisions evaporate
-with the transcript, and nobody knows what the human still owes the pipeline.
+every new chat re-derives context, drive-by edits pile up, decisions
+evaporate with the transcript, and nobody knows what the human still owes
+the pipeline.
 
-## The core ideas (核心要领)
+## The architecture
 
-| Idea | Mechanism |
+Two written-down roles — the **agent as project lead** (plans, builds,
+drafts, tracks, proposes) and the **human as decision-maker and executor**
+(submits, sends, publishes, has final say) — collaborating through a shared
+file layer that any conversation reads and writes:
+
+| File | Role |
 |---|---|
-| **处处留痕** — every change leaves a trace | `WORKLOG.md`: one chronological ledger, one entry per unit of work (Did / Why / Result / Next), newest on top. Non-obvious choices get a **DECISION** record (Context / Chose / Rejected / Revisit-if). |
-| **Roles are written down** | Agent = project lead (plan, build, draft, track, propose). Human = decision-maker + external executor (submit, send, publish, pay). The goal sits at the top of the README. |
-| **一会话一线** — one conversation, one lane | Group sub-projects into 5–7 lanes; each chat declares one lane at pickup ("接手 <lane>") and stays in it. Out-of-lane work is escalated to the board, not done drive-by. |
-| **The board is the seam** | `NEXT_ACTIONS.md`: two live queues (human's real-world actions with deadlines / agent's build backlog with triggers), updated at every hand-off. WORKLOG is history; the board is *now*. |
-| **One source of truth per fact** | Update the home file, never the copy; generated outputs are never the master; secrets only in git-ignored `.env`. |
-| **可接手** — take over cold | Fixed pickup read-order (memory → README → WORKLOG → board → lane docs) and a hard hand-off checklist, including "git status clean in every repo touched". |
+| `README.md` | The goal, the folder map, the lanes. |
+| `WORKLOG.md` | History — one chronological ledger (Did / Why / Result / Next) plus DECISION records (Context / Chose / Rejected / Revisit-if). |
+| `NEXT_ACTIONS.md` | Now — two live queues: the human's real-world actions with deadlines, the agent's build backlog with triggers. |
+| Session memory | The always-loaded briefing: IDs, environment quirks, durable facts. |
+
+Each conversation owns **one lane** (group sub-projects into 5–7), declared
+at pickup; every session runs the same loop: **pick up (fixed read order) →
+work (inside the lane) → hand off (checklist: repos clean, ledger and board
+updated)**.
+
+Every rule in the suite is a scar from real use, not a blog-post best
+practice — the "git status clean" gate exists because an audit caught
+uncommitted work; the concurrency rule exists because parallel sessions
+collided on the shared files.
+
+## The skills
+
+| Skill | What it covers |
+|---|---|
+| [`workspace-standard`](skills/workspace-standard/SKILL.md) | The operating system: roles, lanes, the ledger, DECISION records, the action board, source-of-truth discipline, the hand-off checklist. |
+| [`job-search-pipeline`](skills/job-search-pipeline/SKILL.md) | The daily funnel: pluggable sources (Apify LinkedIn actor, free official APIs, a JobSpy sidecar), the knockout gate, weighted scoring, the human curation bar, one master tracker, inbox feedback sync. |
+| [`resume-engineering`](skills/resume-engineering/SKILL.md) | Résumés as build artifacts: one source-of-truth profile, per-track variants by honest reframing, ATS tuning with an honesty ceiling, the compile-scan loop. |
+| [`cover-letters`](skills/cover-letters/SKILL.md) | Evidence-based letters: the evidence bank, four-paragraph structure, honest gap handling, the draft-generator pattern. |
+| [`linkedin-visibility`](skills/linkedin-visibility/SKILL.md) | Algorithm-aware operation of a small expert account: niche consistency, the automated tone gate, de-AI rewriting, credibility-before-asks outreach sequencing. |
+
+Reference implementation of the pipeline:
+[daily-job-matcher](https://github.com/chenxi-bot21/daily-job-matcher).
 
 ## Install
 
-Copy the skill into any workspace you run with Claude Code:
+Copy any skill folder into a workspace you run with Claude Code:
 
 ```
 your-workspace/
-├── .claude/skills/workspace-standard/SKILL.md   ← SKILL.md from this repo
-├── README.md            ← add your goal + folder map + lane table
-├── WORKLOG.md           ← start from templates/WORKLOG.md
-└── NEXT_ACTIONS.md      ← start from templates/NEXT_ACTIONS.md
+├── .claude/skills/<skill-name>/SKILL.md   ← from skills/ in this repo
+├── README.md          ← add your goal + folder map + lane table
+├── WORKLOG.md         ← start from templates/WORKLOG.md
+└── NEXT_ACTIONS.md    ← start from templates/NEXT_ACTIONS.md
 ```
 
-Then open every conversation with "接手 <lane>" (pick up \<lane\>) and end it
-against the §7 checklist.
+Then open every conversation with "pick up \<lane\>" and end it against the
+hand-off checklist.
 
-## Templates
+## Maturity
 
-- [`templates/WORKLOG.md`](templates/WORKLOG.md) — the ledger, with entry + DECISION formats.
-- [`templates/NEXT_ACTIONS.md`](templates/NEXT_ACTIONS.md) — the two-queue action board.
+Distilled from one intensive production use by one person. Treat it as a
+field-tested starting point, not a settled framework — adapt the lanes and
+the queues to your own operation.
 
 ## License
 

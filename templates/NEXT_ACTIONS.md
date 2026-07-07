@@ -1,4 +1,4 @@
-# NEXT_ACTIONS — 行动看板
+# NEXT_ACTIONS — the action board
 
 The live action board. Two queues; every session updates it on hand-off
 (done → remove; new → add with owner + deadline; stale → challenge).
@@ -6,13 +6,13 @@ History lives in `WORKLOG.md`; this file is *now*.
 
 _Last updated: YYYY-MM-DD (session: <lane> — <one-line what>)._
 
-## Human's queue（真实世界动作，按优先级）
+## Human's queue (real-world actions, by priority)
 
 | # | Action | Deadline / note |
 |---|--------|-----------------|
 | 1 | … | … |
 
-## Agent's queue（构建 / 自动化 backlog，按 lane 标注）
+## Agent's queue (build / automation backlog, tagged by lane)
 
 | # | Lane | Action | Trigger / note |
 |---|------|--------|----------------|
