@@ -67,11 +67,20 @@ Rules:
 2. **Shared seams stay shared** — the WORKLOG, NEXT_ACTIONS, and
    source-of-truth files are updatable from any lane; that's how lanes talk.
    Tag WORKLOG entries with the lane.
-3. **Out-of-lane work is escalated, not done drive-by** — if you notice work
-   belonging to another lane, add it to NEXT_ACTIONS tagged with that lane,
-   and let that lane's conversation do it.
+3. **Out-of-lane work is escalated, not done drive-by** — if you notice
+   *substantive* work belonging to another lane, add it to NEXT_ACTIONS tagged
+   with that lane, and let that lane's conversation do it. **Trivial fixes are
+   exempt** (typo, broken link, a one-line stale fact): do them inline and
+   mention it in the WORKLOG entry — the lane rule serves focus, not
+   bureaucracy. If it needs a test run, a decision, or touches more than a
+   couple of lines, it's substantive — escalate.
 4. **Only the meta/PM lane** restructures folders, edits this standard, or
    runs cross-lane audits.
+5. **Concurrency etiquette** — conversations can run in parallel, and the
+   shared files (WORKLOG, NEXT_ACTIONS) are where they collide. Re-read the
+   file top immediately before appending/editing it; another session may have
+   updated it since you last looked (a stale edit fails — re-read and
+   re-apply, never force).
 
 ---
 
