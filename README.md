@@ -48,7 +48,7 @@ collided on the shared files.
 | [`linkedin-visibility`](skills/linkedin-visibility/SKILL.md) | Algorithm-aware operation of a small expert account: niche consistency, the automated tone gate, de-AI rewriting, credibility-before-asks outreach sequencing. |
 
 Reference implementation of the pipeline:
-[daily-job-matcher](https://github.com/chenxi-bot21/daily-job-matcher).
+[auto-job-seek](https://github.com/chenxi-bot21/auto-job-seek).
 
 ## Install
 

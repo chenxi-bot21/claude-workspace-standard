@@ -23,7 +23,7 @@ sources → normalize + dedup → knockout gate → weighted score
 The mechanical steps run as tested code; the judgment steps (reading full job
 descriptions, deciding true fit, writing tracker rows) stay with the agent in
 an interactive session. Reference implementation:
-[daily-job-matcher](https://github.com/chenxi-bot21/daily-job-matcher).
+[auto-job-seek](https://github.com/chenxi-bot21/auto-job-seek).
 
 ## 1. Sources — pluggable, never scraped in-house
 
