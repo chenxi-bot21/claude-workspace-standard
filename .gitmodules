@@ -1,0 +1,9 @@
+[submodule "projects/credit-risk-model"]
+	path = projects/credit-risk-model
+	url = https://github.com/chenxi-bot21/credit-risk-model.git
+[submodule "projects/market-risk-engine"]
+	path = projects/market-risk-engine
+	url = https://github.com/chenxi-bot21/market-risk-engine.git
+[submodule "projects/auto-job-seek"]
+	path = projects/auto-job-seek
+	url = https://github.com/chenxi-bot21/auto-job-seek.git

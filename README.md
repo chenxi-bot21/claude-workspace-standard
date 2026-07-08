@@ -50,6 +50,24 @@ collided on the shared files.
 Reference implementation of the pipeline:
 [auto-job-seek](https://github.com/chenxi-bot21/auto-job-seek).
 
+## The projects (submodules)
+
+The workspace's code projects — each born, built, and handed off entirely
+under this standard — are pinned under [`projects/`](projects/) as git
+submodules:
+
+| Project | What it is |
+|---|---|
+| [`credit-risk-model`](https://github.com/chenxi-bot21/credit-risk-model) | End-to-end credit-risk PD model on Lending Club data — feature pipeline, scorecard + ML benchmarks, calibration and validation docs. |
+| [`market-risk-engine`](https://github.com/chenxi-bot21/market-risk-engine) | Market-risk engine: VaR/ES four ways (historical, parametric, Monte Carlo, filtered), GARCH via MLE, Basel traffic-light backtesting. |
+| [`auto-job-seek`](https://github.com/chenxi-bot21/auto-job-seek) | The agent-operated daily job-search pipeline this suite was distilled from. |
+
+Clone everything at once:
+
+```
+git clone --recurse-submodules https://github.com/chenxi-bot21/claude-workspace-standard.git
+```
+
 ## Install
 
 Copy any skill folder into a workspace you run with Claude Code:
