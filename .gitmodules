@@ -10,3 +10,6 @@
 [submodule "projects/risk-mcp"]
 	path = projects/risk-mcp
 	url = https://github.com/chenxi-bot21/risk-mcp.git
+[submodule "projects/risk-brief-agent"]
+	path = projects/risk-brief-agent
+	url = https://github.com/chenxi-bot21/risk-brief-agent.git
