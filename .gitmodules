@@ -13,3 +13,9 @@
 [submodule "projects/risk-brief-agent"]
 	path = projects/ai-risk-analyst-agent
 	url = https://github.com/chenxi-bot21/ai-risk-analyst-agent.git
+[submodule "projects/aml-transaction-monitoring"]
+	path = projects/aml-transaction-monitoring
+	url = https://github.com/chenxi-bot21/aml-transaction-monitoring.git
+[submodule "projects/survey-epi-toolkit"]
+	path = projects/survey-epi-toolkit
+	url = https://github.com/chenxi-bot21/survey-epi-toolkit.git

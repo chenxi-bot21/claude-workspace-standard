@@ -63,6 +63,8 @@ submodules:
 | [`ai-job-search-pipeline`](https://github.com/chenxi-bot21/ai-job-search-pipeline) | The agent-operated daily job-search pipeline this suite was distilled from. |
 | [`risk-analytics-mcp-server`](https://github.com/chenxi-bot21/risk-analytics-mcp-server) | MCP server exposing the two risk engines to AI agents: 4-method VaR/ES, GARCH, EVT tail risk, Basel backtesting, stress scenarios, PD scorecard. |
 | [`ai-risk-analyst-agent`](https://github.com/chenxi-bot21/ai-risk-analyst-agent) | Agentic daily risk brief: Claude investigates a portfolio through the risk toolkit in a tool-use loop and writes the desk-style morning brief; offline template fallback. |
+| [`aml-transaction-monitoring`](https://github.com/chenxi-bot21/aml-transaction-monitoring) | AML transaction monitoring: typology rules (structuring, rapid movement, high-risk corridors, dormancy) + isolation-forest anomaly layer, alert triage, SAR-style case files — recall/FPR measured on labeled injects. |
+| [`survey-epi-toolkit`](https://github.com/chenxi-bot21/survey-epi-toolkit) | Complex-survey epidemiology: Taylor-linearized variance, survey-weighted logistic regression with design-corrected SEs (svyglm-style), weighted Table 1 — validated against known true effects. |
 
 Clone everything at once:
 
