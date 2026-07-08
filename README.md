@@ -61,6 +61,7 @@ submodules:
 | [`credit-risk-model`](https://github.com/chenxi-bot21/credit-risk-model) | End-to-end credit-risk PD model on Lending Club data — feature pipeline, scorecard + ML benchmarks, calibration and validation docs. |
 | [`market-risk-engine`](https://github.com/chenxi-bot21/market-risk-engine) | Market-risk engine: VaR/ES four ways (historical, parametric, Monte Carlo, filtered), GARCH via MLE, Basel traffic-light backtesting. |
 | [`auto-job-seek`](https://github.com/chenxi-bot21/auto-job-seek) | The agent-operated daily job-search pipeline this suite was distilled from. |
+| [`risk-mcp`](https://github.com/chenxi-bot21/risk-mcp) | MCP server exposing the two risk engines to AI agents: 4-method VaR/ES, GARCH, EVT tail risk, Basel backtesting, stress scenarios, PD scorecard. |
 
 Clone everything at once:
 
