@@ -48,7 +48,7 @@ collided on the shared files.
 | [`linkedin-visibility`](skills/linkedin-visibility/SKILL.md) | Algorithm-aware operation of a small expert account: niche consistency, the automated tone gate, de-AI rewriting, credibility-before-asks outreach sequencing. |
 
 Reference implementation of the pipeline:
-[auto-job-seek](https://github.com/chenxi-bot21/auto-job-seek).
+[ai-job-search-pipeline](https://github.com/chenxi-bot21/ai-job-search-pipeline).
 
 ## The projects (submodules)
 
@@ -60,9 +60,9 @@ submodules:
 |---|---|
 | [`credit-risk-model`](https://github.com/chenxi-bot21/credit-risk-model) | End-to-end credit-risk PD model on Lending Club data — feature pipeline, scorecard + ML benchmarks, calibration and validation docs. |
 | [`market-risk-engine`](https://github.com/chenxi-bot21/market-risk-engine) | Market-risk engine: VaR/ES four ways (historical, parametric, Monte Carlo, filtered), GARCH via MLE, Basel traffic-light backtesting. |
-| [`auto-job-seek`](https://github.com/chenxi-bot21/auto-job-seek) | The agent-operated daily job-search pipeline this suite was distilled from. |
-| [`risk-mcp`](https://github.com/chenxi-bot21/risk-mcp) | MCP server exposing the two risk engines to AI agents: 4-method VaR/ES, GARCH, EVT tail risk, Basel backtesting, stress scenarios, PD scorecard. |
-| [`risk-brief-agent`](https://github.com/chenxi-bot21/risk-brief-agent) | Agentic daily risk brief: Claude investigates a portfolio through the risk toolkit in a tool-use loop and writes the desk-style morning brief; offline template fallback. |
+| [`ai-job-search-pipeline`](https://github.com/chenxi-bot21/ai-job-search-pipeline) | The agent-operated daily job-search pipeline this suite was distilled from. |
+| [`risk-analytics-mcp-server`](https://github.com/chenxi-bot21/risk-analytics-mcp-server) | MCP server exposing the two risk engines to AI agents: 4-method VaR/ES, GARCH, EVT tail risk, Basel backtesting, stress scenarios, PD scorecard. |
+| [`ai-risk-analyst-agent`](https://github.com/chenxi-bot21/ai-risk-analyst-agent) | Agentic daily risk brief: Claude investigates a portfolio through the risk toolkit in a tool-use loop and writes the desk-style morning brief; offline template fallback. |
 
 Clone everything at once:
 

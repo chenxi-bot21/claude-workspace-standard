@@ -5,11 +5,11 @@
 	path = projects/market-risk-engine
 	url = https://github.com/chenxi-bot21/market-risk-engine.git
 [submodule "projects/auto-job-seek"]
-	path = projects/auto-job-seek
-	url = https://github.com/chenxi-bot21/auto-job-seek.git
+	path = projects/ai-job-search-pipeline
+	url = https://github.com/chenxi-bot21/ai-job-search-pipeline.git
 [submodule "projects/risk-mcp"]
-	path = projects/risk-mcp
-	url = https://github.com/chenxi-bot21/risk-mcp.git
+	path = projects/risk-analytics-mcp-server
+	url = https://github.com/chenxi-bot21/risk-analytics-mcp-server.git
 [submodule "projects/risk-brief-agent"]
-	path = projects/risk-brief-agent
-	url = https://github.com/chenxi-bot21/risk-brief-agent.git
+	path = projects/ai-risk-analyst-agent
+	url = https://github.com/chenxi-bot21/ai-risk-analyst-agent.git
