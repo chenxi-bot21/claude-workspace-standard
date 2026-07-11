@@ -46,6 +46,7 @@ collided on the shared files.
 | [`resume-engineering`](skills/resume-engineering/SKILL.md) | Résumés as build artifacts: one source-of-truth profile, per-track variants by honest reframing, ATS tuning with an honesty ceiling, the compile-scan loop. |
 | [`cover-letters`](skills/cover-letters/SKILL.md) | Evidence-based letters: the evidence bank, four-paragraph structure, honest gap handling, the draft-generator pattern. |
 | [`linkedin-visibility`](skills/linkedin-visibility/SKILL.md) | Algorithm-aware operation of a small expert account: niche consistency, the automated tone gate, de-AI rewriting, credibility-before-asks outreach sequencing. |
+| [`kaggle-competition`](skills/kaggle-competition/SKILL.md) | A lean, auditable Kaggle harness: a pluggable competition registry and a shared download → model → submit → score loop, with two submission paths — CSV for Playground and a kernel path (scaffold → push → poll → pull) for code-competitions that run on Kaggle's own GPU infra. Bundles runnable `harness.py` + `registry.py`. |
 
 Reference implementation of the pipeline:
 [ai-job-search-pipeline](https://github.com/chenxi-bot21/ai-job-search-pipeline).
