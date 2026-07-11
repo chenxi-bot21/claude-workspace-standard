@@ -19,3 +19,6 @@
 [submodule "projects/survey-epi-toolkit"]
 	path = projects/survey-epi-toolkit
 	url = https://github.com/chenxi-bot21/survey-epi-toolkit.git
+[submodule "projects/kaggle-competition-harness"]
+	path = projects/kaggle-competition-harness
+	url = https://github.com/chenxi-bot21/kaggle-competition-harness.git
